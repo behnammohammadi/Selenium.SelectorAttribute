@@ -27,7 +27,7 @@ jobs:
         dotnet build --configuration Release --no-restore 
     - name: Deploy
       run: |
-        cd src\Selenium.SelectorAttribute\bin\Release
+        cd src/Selenium.SelectorAttribute/bin/Release
         dotnet nuget push *.nupkg -k ${{ secrets.nuget_key }}
     #- name: Test
       #run: |
