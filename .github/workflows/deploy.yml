@@ -1,4 +1,4 @@
-name: .NET Core
+name: Deploy
 
 on:
   push:
@@ -25,12 +25,11 @@ jobs:
       run: |
         cd src
         dotnet build --configuration Release --no-restore 
-    - name: Test
+    - name: Deploy
       run: |
-        cd src
-        dotnet test --no-restore --verbosity normal
-    - name: Changelog checker
-      uses: Zomzog/changelog-checker@v1.0.0
-      with:
-        # Changelog fileName
-        fileName: CHANGELOG.adoc
+        cd src\Selenium.SelectorAttribute\bin\Release
+        dotnet nuget push *.nupkg -k ${{ secrets.nuget_key }}
+    #- name: Test
+      #run: |
+        #cd src
+        #dotnet test --no-restore --verbosity normal
