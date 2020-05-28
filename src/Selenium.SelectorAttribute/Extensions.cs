@@ -7,10 +7,10 @@ namespace Selenium.SelectorAttribute
 {
     public static class Extensions
     {
-        public static T FindElementsByModel<T>(this IWebDriver remoteWebDriver) where T : class, new()
+        public static T FindElementsByModel<T>(this IWebDriver webDriver) where T : class, new()
         {
-            if (remoteWebDriver is null)
-                throw new ArgumentNullException(nameof(remoteWebDriver));
+            if (webDriver is null)
+                throw new ArgumentNullException(nameof(webDriver));
 
             var model = new T();
 
@@ -26,11 +26,11 @@ namespace Selenium.SelectorAttribute
                 switch (attribute)
                 {
                     case CssSelectorAttribute cssSelector:
-                        data = remoteWebDriver.FindElement(By.CssSelector(cssSelector.Selector));
+                        data = webDriver.FindElement(By.CssSelector(cssSelector.Selector));
                         break;
 
                     case XPathSelectorAttribute xPathSelector:
-                        data = remoteWebDriver.FindElement(By.XPath(xPathSelector.Selector));
+                        data = webDriver.FindElement(By.XPath(xPathSelector.Selector));
                         break;
 
                     default:
