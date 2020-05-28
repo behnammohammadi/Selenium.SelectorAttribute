@@ -28,7 +28,7 @@ jobs:
     - name: Deploy
       run: |
         cd src/Selenium.SelectorAttribute/bin/Release
-        dotnet nuget push *.nupkg -k ${{ secrets.nuget_key }} -Source "https://www.nuget.org/api/v2/"
+        dotnet nuget push *.nupkg -k ${{ secrets.nuget_key }} -s "https://www.nuget.org/api/v2/"
     #- name: Test
       #run: |
         #cd src
