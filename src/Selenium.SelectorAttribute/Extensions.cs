@@ -7,6 +7,11 @@ namespace Selenium.SelectorAttribute
 {
     public static class Extensions
     {
+        /// <summary>
+        /// Finds the first properties in the model using the given selector model that decorate with property attributes.
+        /// </summary>
+        /// <typeparam name="T">Model that decorate with attributes that derived from <see cref="T:Selenium.SelectorAttribute.Attributes.BaseAttribute" /></typeparam>
+        /// <returns>The first matching properties in model on the current context.</returns>
         public static T FindElementsByModel<T>(this IWebDriver webDriver) where T : class, new()
         {
             if (webDriver is null)

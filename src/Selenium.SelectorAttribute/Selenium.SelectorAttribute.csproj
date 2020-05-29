@@ -2,15 +2,29 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Description>This is extension method for selenium driver.</Description>
+    <Description>Fetch data from pages by selenium stack with models, model properties decorated with selector attributes.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Authors>Behnam Mohammadi</Authors>
     <Company />
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/behnammohammadi/Selenium.SelectorAttribute</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/behnammohammadi/Selenium.SelectorAttribute</RepositoryUrl>
+    <Version>1.0.2</Version>
+    <PackageReleaseNotes />
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
