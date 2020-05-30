@@ -25,7 +25,7 @@ $ dotnet add package Selenium.SelectorAttribute
 
 Now you can use SelectorAttribute in your code:
 ```csharp
-	using Selenium.SelectorAttributeTests.Models;
+	using Selenium.SelectorAttribute;
 ```
 ```csharp
 	public class MyModel
