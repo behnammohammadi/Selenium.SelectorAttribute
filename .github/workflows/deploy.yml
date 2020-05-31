@@ -21,6 +21,8 @@ jobs:
       run: |
         cd src
         dotnet restore
+    - name: Clean
+      run: rm src/Selenium.SelectorAttribute/bin/Release/*.nupkg
     - name: Build
       run: |
         cd src
