@@ -1,6 +1,6 @@
 ﻿Selenium.SelectorAttribute 
 ![Nuget](https://img.shields.io/nuget/v/Selenium.SelectorAttribute)
-![Nuget](https://img.shields.io/nuget/dt/Selenium.SelectorAttribute?style=plastic)
+![Nuget](https://img.shields.io/nuget/dt/Selenium.SelectorAttribute)
 ========
 
 Fetch data from pages by selenium stack with models, model properties decorated with selector attributes.
